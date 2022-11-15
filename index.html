@@ -10,10 +10,10 @@
 <body>
     <h1>Rock Paper Scissors</h1>
     <p>Play against the machine</p>
-    <p>Rules of the game: Rock breaks the scissors, Scissors cut the paper, Paper cover the rock</p>
+    <p id="rules">Rules of the game: Rock breaks the scissors, Scissors cut the paper, Paper cover the rock</p>
     <div class="game-panel">
         <div class="player">
-            <p>Choose one item</p>
+            <p>Choose one item:</p>
             <div>
                 <button id="rock-btn">ROCK</button>
             </div>
@@ -26,13 +26,14 @@
         </div>
         <div class="machine">
             <p>Machine Choice:</p>
-            <p>**PAPER**</p>
+            <p id="random-el">**PAPER**</p>
         </div>    
     </div>
     <div class="points">
-        <p id="player-points">Points:</p>
-        <p id="machine-points">Points: </p>
+        <p>0</p>
+        <p>0</p>
     </div>
+    <p id="comment">You win!</p>
 
     <script src="./index.js">
         
