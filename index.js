@@ -5,9 +5,9 @@ let playerPoints = 0
 let machinePoints = 0
 let comment = document.getElementById("comment")
 let isAlive = true 
-let rockBtn = document.getElementById("rock-btn")
-let paperBtn = document.getElementById("paper-btn")
-let scissorsBtn = document.getElementById("scissors-btn")
+const rockBtn = document.getElementById("rock-btn")
+const paperBtn = document.getElementById("paper-btn")
+const scissorsBtn = document.getElementById("scissors-btn")
 let playerEl = document.getElementById("player-el")
 let machineEl = document.getElementById("machine-el")
 let randomEl = document.getElementById("random-el")
@@ -56,22 +56,46 @@ function rules() {
 //Invoking JS functions on clicked buttons:
 //Rock button
 rockBtn.addEventListener("click", function() {
-    playerChoice = "rock"
-    randomChoice();
-    rules();
+    finalGame();
+    if (isAlive === true) {
+        playerChoice = "rock"
+        randomChoice();
+        rules();
+    }
 })
 
 //Paper button
 paperBtn.addEventListener("click", function() {
-    playerChoice = "paper"
-    randomChoice();
-    rules();
+    finalGame();
+    if (isAlive === true) {
+        playerChoice = "paper"
+        randomChoice();
+        rules();
+    }    
 })
 
 //Scissors button
 scissorsBtn.addEventListener("click", function () {
-    playerChoice = "scissors"
-    randomChoice();
-    rules();
+    finalGame();
+    if (isAlive === true) {
+        playerChoice = "scissors"
+        randomChoice();
+        rules();
+    }    
 }
 )
+
+//Create a function that stop the game when player or machine get 10 points
+function finalGame() {
+    if (playerPoints === 10 && machinePoints < 10) {
+        isAlive = false
+        comment.textContent = "Congratulations!! You won the game"
+
+
+    }else if (playerPoints < 10 && machinePoints === 10) {
+        isAlive = false
+        comment.textContent = "Sorry! You lost the game"
+    } else {
+        isAlive = true;
+    }
+}
