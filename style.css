@@ -1,0 +1,49 @@
+body {
+    background-color: darkblue;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:antiquewhite;
+}
+
+.game-panel {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    text-align: center;
+    
+}
+
+#rules {
+    font-size: 10px;
+    font-style: italic;
+}
+
+button {
+    color: darkblue;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    width: 90px;
+    padding: 5px;
+}
+
+.points {
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+
+}
+
+.points p {
+    font-size: 28px;
+}
+
+#random-el {
+    margin-top: 50px;
+}
+
+#comment {
+    font-size: 20px;
+    color: orange;
+    
+}
