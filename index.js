@@ -1,6 +1,6 @@
 //Create variables
 let playerChoice = "rock"
-let machineChoice = "paper"
+let machineChoice = ""
 let playerPoints = 0
 let machinePoints = 0
 let comment = document.getElementById("comment")
@@ -10,6 +10,17 @@ let paperBtn = document.getElementById("paper-btn")
 let scissorsBtn = document.getElementById("scissors-btn")
 let playerEl = document.getElementById("player-el")
 let machineEl = document.getElementById("machine-el")
+let randomEl = document.getElementById("random-el")
+
+
+//Create random machineChoice
+function randomChoice() {
+    let choices = ["rock", "paper", "scissors"]
+    let i = Math.floor(Math.random()*3)
+    machineChoice = choices[i]
+    randomEl.textContent = machineChoice
+
+}
 
 //Rules of the game
 function rules() {
@@ -46,18 +57,21 @@ function rules() {
 //Rock button
 rockBtn.addEventListener("click", function() {
     playerChoice = "rock"
+    randomChoice();
     rules();
 })
 
 //Paper button
 paperBtn.addEventListener("click", function() {
     playerChoice = "paper"
+    randomChoice();
     rules();
 })
 
 //Scissors button
 scissorsBtn.addEventListener("click", function () {
     playerChoice = "scissors"
+    randomChoice();
     rules();
-})
-
+}
+)
