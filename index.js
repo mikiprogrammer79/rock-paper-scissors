@@ -8,7 +8,8 @@ let isAlive = true
 let rockBtn = document.getElementById("rock-btn")
 let paperBtn = document.getElementById("paper-btn")
 let scissorsBtn = document.getElementById("scissors-btn")
-
+let playerEl = document.getElementById("player-el")
+let machineEl = document.getElementById("machine-el")
 
 //Rules of the game
 function rules() {
@@ -37,6 +38,8 @@ function rules() {
     }else if (playerChoice == "scissors" && machineChoice == "scissors") {
         comment.textContent = "Try again!"
     }
+    playerEl.textContent = playerPoints
+    machineEl.textContent = machinePoints
 }
 
 //Invoking JS functions on clicked buttons:
@@ -57,3 +60,4 @@ scissorsBtn.addEventListener("click", function () {
     playerChoice = "scissors"
     rules();
 })
+
